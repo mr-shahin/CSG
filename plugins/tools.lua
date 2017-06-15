@@ -1004,7 +1004,7 @@ end
 
 if (matches[1] == 'createsuper' or matches[1] == 'ساخت سوپر گروه') and is_admin(msg) then
 local text = matches[2]
-tdcli.createNewChannelChat(text, 1, '@NebronTM', (function(b, d) tdcli.addChatMember(d.id_, msg.from.id, 0, dl_cb, nil) end), nil)
+tdcli.createNewChannelChat(text, 1, 'CSG-TeAm', (function(b, d) tdcli.addChatMember(d.id_, msg.from.id, 0, dl_cb, nil) end), nil)
    if not lang then 
 return '_SuperGroup Has Been Created and_ [`'..msg.from.id..'`] _Joined To This SuperGroup._'
   else
@@ -1099,11 +1099,11 @@ end
   if is_sudo(msg) then
 	if (matches[1]:lower() == "sendfile" or matches[1] == 'ارسال فایل') and matches[2] and matches[3] then
 		local send_file = "./"..matches[2].."/"..matches[3]
-		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, send_file, '@NebronTM', dl_cb, nil)
+		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, send_file, 'CSG-TeAm', dl_cb, nil)
 	end
 	if matches[1]:lower() == "sendplug" or matches[1] == 'ارسال پلاگین' and matches[2] then
 	    local plug = "./plugins/"..matches[2]..".lua"
-		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, plug, '@NebronTM', dl_cb, nil)
+		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, plug, 'CSG-TeAm', dl_cb, nil)
     end
   end
 
@@ -1163,7 +1163,7 @@ return chat_list(msg)
 	   tdcli.sendMessage(matches[2], 0, 1, "Group has been removed by admin command", 1, 'html')
     return '_Group_ *'..matches[2]..'* _removed_'
 		end
-if matches[1] == 'nebron' or matches[1] == 'نبرون' then
+if matches[1] == 'seed' or matches[1] == 'سید' then
 return tdcli.sendMessage(msg.to.id, msg.id, 1, _config.info_text, 1, 'html')
     end
 if (matches[1] == 'adminlist' or matches[1] == 'لیست ادمین') and is_admin(msg) then
@@ -1548,8 +1548,8 @@ patterns_fa = {
     "^(ارسال) +(.*) (-%d+)$",
 	"^(افزودن) (-%d+)$",
 	"^(پاک کردن حافظه)$",
-	"^(نبرون)$",
+	"^(سید)$",
 },
 run = run, pre_process = pre_process
 }
--- #End By @NebronTM
+-- #End By CSG-TeAm
