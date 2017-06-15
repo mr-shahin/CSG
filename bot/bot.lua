@@ -1,6 +1,3 @@
--- #Nebron Robot
--- #@NebronTM
-
 tdcli = dofile('./libs/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
@@ -79,8 +76,7 @@ function create_config( )
 		"groupmanager",
 		"msg-checks",
 		"plugins",
-		"tools",
-	    "fun",
+		"tools"
 	},
     sudo_users = {
    373670309,
@@ -89,17 +85,7 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》 Nebron V1.0
-
-》https://github.com/NebronTM/bot
-
-》Admins :
-》@HelperTEST ➣ Founder & Developer《
-
-
-》Our channel :
-》@NebronTM《
-
+    info_text = [[》 CSG-TEAM
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
