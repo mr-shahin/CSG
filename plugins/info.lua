@@ -51,8 +51,3 @@ patterns_fa = {
 
       run = run
 }
-
--- END
--- By @MR_me_ir
--- CHANNEL: @NebronTM
--- We Are The Best :-)
