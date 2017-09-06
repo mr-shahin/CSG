@@ -1,11 +1,4 @@
---[[
 
-#
-#     @MemberPlus_TM
-#   @TgMessengerBot
-#      
-
-]]
 do
 function run_bash(str)
     local cmd = io.popen(str)
@@ -60,7 +53,7 @@ end
 function run(msg, matches)
 	local hash = 'usecommands:'..msg.from.id..':'..msg.to.id
 	redis:incr(hash)
-	local receiver	= get_receiver(msg)
+	
 	local city = matches[1]
 	if matches[1] == 'praytime' then
 	city = 'Tehran'
